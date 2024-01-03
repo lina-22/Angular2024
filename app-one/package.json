@@ -1,5 +1,5 @@
 {
-  "name": "my-app-one",
+  "name": "app-one",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-app-one": "node dist/my-app-one/server/server.mjs"
+    "serve:ssr:app-one": "node dist/app-one/server/server.mjs"
   },
   "private": true,
   "dependencies": {
