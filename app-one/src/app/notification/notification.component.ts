@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="notification-div">
+  template: `<div class="alert alert-success">
     <p>This website uses cookies to provide better user experience</p>
   </div>`,
   styles: [
