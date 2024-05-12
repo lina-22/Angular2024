@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { eventNames } from 'node:process';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
