@@ -12,6 +12,7 @@ export class ProductsComponent {
       product: 'a name',
       productViews: 100,
       price: '100',
+      available: 'Available',
       image: 'assets/lilium.png',
     },
     {
@@ -19,7 +20,7 @@ export class ProductsComponent {
       product: 'another name',
       productViews: 200,
       price: '100',
-      available: 'Available',
+      available: 'Not Available',
       image: 'assets/desert.png',
     },
     {
@@ -43,7 +44,7 @@ export class ProductsComponent {
       product: 'another name',
       productViews: 200,
       price: '100',
-      available: 'Available',
+      available: 'Not Available',
       image: 'assets/lilium.png',
     },
   ];
