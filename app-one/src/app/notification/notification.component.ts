@@ -27,4 +27,5 @@ export class NotificationComponent implements OnInit {
   closeNotification() {
     this.displayNotification = true;
   }
+  
 }
