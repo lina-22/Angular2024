@@ -136,4 +136,10 @@ export class ProductsComponent {
   getPremiumCourses(){
     return this.products.filter(course => course.type === 'Premium').length;
   }
+
+  courseCountRadioButton: string = 'All';
+  onFilterRadioButtonChanged(data: string){
+    this.courseCountRadioButton = data;
+    console.log(this.courseCountRadioButton);
+  }
 }

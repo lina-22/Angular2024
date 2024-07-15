@@ -9,9 +9,10 @@
     [free]="getFreeCourses()"
     [premium]="getPremiumCourses()"
     
-    ></app-filter>
+    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
 </div>
-<div *ngFor="let p of products; let i = index">
+<ng-container *ngFor="let p of products; let i = index">
+<div *ngIf="courseCountRadioButton === 'All'">
   <!-- <div>{{ i }}</div> -->
   <div class="product-container">
     <div class="id-container">
@@ -49,3 +50,4 @@
     </div>
   </div>
 </div>
+</ng-container>
