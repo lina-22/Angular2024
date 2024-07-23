@@ -131,15 +131,24 @@ export class ProductsComponent {
     return this.products.length;
   }
   getFreeCourses(){
-    return this.products.filter(course => course.type === 'Free').length;
+    return this.products.filter(product => product.type === 'Free').length;
   }
   getPremiumCourses(){
-    return this.products.filter(course => course.type === 'Premium').length;
+    return this.products.filter(product => product.type === 'Premium').length;
   }
 
   courseCountRadioButton: string = 'All';
+  
+  searchText: string ="";
+
   onFilterRadioButtonChanged(data: string){
     this.courseCountRadioButton = data;
-    console.log(this.courseCountRadioButton);
+    // console.log(this.courseCountRadioButton);
   }
+
+  onSearchTextEntered(searchValue: string){
+      this.searchText = searchValue;
+      // console.log(this.searchText);
+  }
+
 }

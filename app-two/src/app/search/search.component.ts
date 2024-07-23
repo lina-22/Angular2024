@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { eventNames } from 'node:process';
 import { FormsModule } from '@angular/forms';
 
@@ -12,10 +12,18 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  searchValue: string = '';
+  enteredSearchValue: string = '';
+
+  @Output()
+  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+  onSearchTextChanged(){
+    this.searchTextChanged.emit(this.enteredSearchValue);
+  }
+
+
   changeSearcheValue(eventData: any) {
     // console.log(eventData);
     // console.log((<HTMLInputElement>eventData.target).value);
-    this.searchValue = (<HTMLInputElement>eventData.target).value;
+    this.enteredSearchValue = (<HTMLInputElement>eventData.target).value;
   }
 }

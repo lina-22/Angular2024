@@ -18,7 +18,7 @@ export class FilterComponent implements OnInit {
   selectedRadioButtonValue: string ="All";
 
   @Output()
-  filterRadioButtonSelectionChanged: EventEmitter<String> = new EventEmitter<String>();
+  filterRadioButtonSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
 
   onRadioButtonSelectionChanged(){
     this.filterRadioButtonSelectionChanged.emit(this.selectedRadioButtonValue);

@@ -3,16 +3,18 @@
 </div> -->
 
 <div>
-    <app-search></app-search>
+    <app-search (searchTextChanged)="onSearchTextEntered($event )"></app-search>
     <app-filter 
     [total]="getTotalCourses()"
     [free]="getFreeCourses()"
     [premium]="getPremiumCourses()"
     
-    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)">
+  </app-filter>
 </div>
 <ng-container *ngFor="let p of products; let i = index">
-<div *ngIf="courseCountRadioButton === 'All'">
+<!-- courseCountRadioButton === 'All'|| courseCountRadioButton === p.type -->
+  <div *ngIf="searchText === ''|| p.product.toLowerCase().includes(searchText)">
   <!-- <div>{{ i }}</div> -->
   <div class="product-container">
     <div class="id-container">
