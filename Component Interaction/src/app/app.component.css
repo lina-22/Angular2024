@@ -1,0 +1,8 @@
+.adjust {
+  /* background-color: green; */
+  width: 720px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+}
